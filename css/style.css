@@ -1,0 +1,161 @@
+@font-face {
+	font-family: 'Bangers'; 
+	src: url(/fonts/bangers-regular.ttf); 
+}
+
+body {
+   background: #fff;
+   transition: linear 1.2s;
+}
+
+body.dark {
+   background: #000000;
+   transition: linear 1s;
+}
+
+body.dark button {
+   background: #fff;
+}
+
+body.dark .lamp {
+   background: url('../img/light-on.png');
+   background-size: contain;
+   background-color: #fff;
+   transition: linear 1s;
+}
+
+.lamp {
+   position: fixed;
+   top: 35px;
+   left: 35px;
+   background: url('../img/light-off.png');
+   background-size: contain;
+   background-color: #000;
+   width: 35px;
+   height: 35px;
+   border-radius: 100%;
+   padding: 10px;
+   transition: linear 1s;
+}
+
+.main-tittle {
+   position: absolute;
+   width: 450px;
+   height: 450px;
+   top: 50%;
+   left: 50%;
+   margin-top: -225px;
+   margin-left: -225px;
+   font-family: 'Bangers';
+   font-size: 250px; 
+   color: #000;
+}
+
+.main-tittle span {
+   margin-top: -40px;
+   font-size: 80px;
+   letter-spacing: 10px;
+   text-transform: uppercase;
+   display: block;
+}
+
+body.dark .main-tittle {
+   color: #fff;
+   transition: linear 1.2s;
+}
+
+.slider {
+   width: 250px;
+   height: 250px;
+   position: absolute;
+   top: 60%;
+   left: 33%;
+   margin-top: -125px;
+   margin-left: -125px;
+   margin: 30px auto;
+   border: solid 2px rgba(0, 0, 0, 0.13);
+   overflow: hidden;
+}
+
+.slider-line {
+   height: 250px;
+   width: 1000px;
+   display: flex;
+   position: relative;
+   left: 0;
+   transition: all ease 1s;
+}
+
+#sliderPrev {
+   position: absolute;
+   font-size: 75px;
+   margin-top: -75px;
+   margin-left: -75px;
+   top: 80%;
+   left: 35%;
+   cursor: pointer;
+   color: #b9b9b9;
+}
+
+#sliderNext {
+   position: absolute;
+   font-size: 75px;
+   margin-top: -75px;
+   margin-left: -75px;
+   top: 80%;
+   left: 70%;
+   cursor: pointer;
+   color: #b9b9b9;
+}
+
+#sliderPrev:hover, #sliderNext:hover {
+   color: black;
+}
+
+ .eyes {
+ display: flex;
+} 
+
+.eyes .eye {
+   position: relative;
+   width: 120px;
+   height: 120px;
+   display: block;
+   background: #fff;
+   margin: 0 20px;
+   border-radius: 50%;
+   border: solid 2px #000;
+}
+
+.eyes .eye::before {
+   content: ' ';
+   position: absolute;
+   top: 50%;
+   left: 35px;
+   transform: translate(-50%, -50%);
+   width: 45px;
+   height: 45px;
+   border-radius: 50%;
+   background: #000;
+   box-sizing: border-box;
+}
+
+@media (max-width: 500px) {
+   .main-tittle {
+      width: 300px;
+      height: 300px;
+      margin-top: -150px;
+      margin-left: -150px;
+      font-size: 150px;
+      text-align: center;
+   }
+   .main-tittle span {
+      font-size: 40px;
+      margin-top: -20px;
+   }
+
+   .lamp {
+      width: 20px;
+      height: 20px;
+   }
+}
